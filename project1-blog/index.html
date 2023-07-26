@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- google material icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>PWSkills Blog</h1>
+        <span class="material-symbols-outlined" name="icon-add">
+            add
+        </span>
+    </header>
+    <main>
+        <div class="blogs" id="blog-container">
+
+        </div>
+    </main>
+    <div class="modal hide">
+        <div class="modal__box">
+            <div class="modal__header">
+                <span class="material-symbols-outlined" name="icon-close">
+                    close
+                </span>
+            </div>
+            <form>
+                <input type="url" name="imageURL" placeholder="Enter Blog Post URL:" required>
+                <input type="text" name="title" placeholder="Enter Blog Title:" required>
+                <input type="text" name="description" placeholder="Enter Blog Description:" required>
+                <textarea type="text" name="text" placeholder="Write..." rows="10"></textarea>
+                <button type="submit">Add blog</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
