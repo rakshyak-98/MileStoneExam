@@ -89,6 +89,10 @@ img {
     border-radius: var(--border-radius, 20px);
     box-shadow: var(--box-shadow);
 }
+.post__detailed .top-bar{
+    display: flex;
+    justify-content: end;
+}
 .post__detailed .header{
     display: flex;
     max-height: 200px;

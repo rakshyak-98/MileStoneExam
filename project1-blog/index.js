@@ -65,6 +65,11 @@ function getPostById(id) {
 
 function getDetailedPostDOMString({ imageURL, title, description, text }) {
   return `<div class="post__detailed">
+  <div class="top-bar">
+  <span class="material-symbols-outlined" name="icon-back">
+arrow_back
+</span>
+  </div>
   <div class="header">
     <div class="left">
     <h2>${title}</h2>
@@ -74,7 +79,7 @@ function getDetailedPostDOMString({ imageURL, title, description, text }) {
     <img src=${imageURL} alt="detail post image" />
     </div>
   </div>
-  <div class="post__detailed__content>
+  <div class="post__detailed__content">
   <p>${text}</p>
   </div>
   </div>`;
@@ -112,8 +117,9 @@ function onLoad() {
 
 function onHashChange() {
   const currentSelectedPost = getPostById(location.hash.split("=")[1]);
-  console.log(currentSelectedPost);
+  if(!currentSelectedPost) location.reload()
   document.body.innerHTML = getDetailedPostDOMString(currentSelectedPost);
+  document.getElementsByName("icon-back")[0].addEventListener("click", () => history.back())
 }
 
 function getPostDOMString({ imageURL, title, description, id }) {
